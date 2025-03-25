@@ -6,45 +6,60 @@ namespace Actividad01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
-    }
+            gym gimnasio1 = new gym();
+            gimnasio1.nombregym = "Lo de manolo";
+            gimnasio1.cantmaquinas = 20;
+            gimnasio1.cantpersonal = 10;
+            gimnasio1.clasemassolicitada = "Pilates";
+            gimnasio1.musculoquetrabaja = "Full body";
 
-    public class gym
-    {
-        public int cantmaquinas;
-        public string nombrermaquina;
-        public string musculoquetrabaja;
-
-        public void descanso()
-        {
-            Console.WriteLine("En descanso");
+            perros perro1 = new perros();
+            perro1.nombre = "Kira";
+            perro1.raza = "Labrador";
+            perro1.edad = 3;
+            perro1.peso = 20;
         }
 
-        public void enactividad()
-        {
-            Console.WriteLine("En actividad");
-        }
-    }   
 
-    public class perros
-    {
-        public string nombre;
-        public string raza;
-        public int edad;
-        public float peso;
+        public class gym
+        {
+            public string nombregym;
+            public int cantmaquinas;
+            public int cantpersonal;
+            public string clasemassolicitada;
+            public string musculoquetrabaja;
 
-        public void comiendo()
-        {
-            Console.WriteLine("El perro esta comiendo");
+            public void abierto()
+            {
+                Console.WriteLine($"Gimnasio {nombregym} ABIERTO");
+            }
+
+            public void cerrado()
+            {
+                Console.WriteLine($"Gimnasio {nombregym} CERRADO");
+            }
         }
-        public void ladrar()
+
+        public class perros
         {
-            Console.WriteLine("El perro esta ladrando");
-        }
-        public void durmiendo()
-        {
-            Console.WriteLine("El perro esta durmiendo");
+            public string nombre;
+            public string raza;
+            public int edad;
+            public float peso;
+
+            public void comiendo()
+            {
+                Console.WriteLine($"{nombre} esta comiendo");
+            }
+            public void ladrar()
+            {
+                Console.WriteLine($"{nombre} esta ladrando");
+            }
+            public void durmiendo()
+            {
+                Console.WriteLine($"{nombre} esta durmiendo");
+            }
+            //$"{nombre1} de raza {raza} esta maullando"
         }
     }
 }
